@@ -13,7 +13,7 @@ function [res,cpu] = main(data)
         [Y, tcpu] = JL(data,k);
         %disp(data);
         %disp(k);
-        res(i) = fknn(data, Y, k);
+        res(i) = fknn(data, Y, 5);
         cpu(i) = tcpu;
     end
         

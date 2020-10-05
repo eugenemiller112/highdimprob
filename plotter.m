@@ -1,4 +1,4 @@
-function plotter(X, Y)
+function plotter(X, Y, rgb)
     % compute parewise distance
     disp(size(X));
     disp(size(Y));
@@ -15,12 +15,15 @@ function plotter(X, Y)
     
     % plot to scatter
     %figure()
-    %scatter(D(:),C(:));
+    title('Fractions of Nearest Neighbors (Fast JL)');
+    xlabel('Distortion Ratio');
+    %ylabel('Reduced Data');
+    %scatter(D,C, [], rgb);
     
     % represent as histogram
     r = C ./ D;
-    disp(r);
-    histogram(r);
+    %disp(r);
+    histogram(r, 'FaceColor', rgb);
     
     
 end

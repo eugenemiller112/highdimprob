@@ -1,6 +1,6 @@
 function [Y, cpu] = fJL(X, k)
     start = cputime;
-    d = size(X, 2);
+    d = size(X, 1);
     A = zeros(k,d);
     n = size(X,2);
     for i = 1:k
@@ -15,7 +15,8 @@ function [Y, cpu] = fJL(X, k)
             end
         end
     end
-    
+    Y = zeros(k,n);
+    start = cputime;
     for i = 1:n
              Y(:,i) = A*X(:,i);  
     end
