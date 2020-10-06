@@ -1,5 +1,5 @@
 function [Y, cpu] = fJL(X, k)
-    start = cputime;
+    %start = cputime;
     d = size(X, 1);
     A = zeros(k,d);
     n = size(X,2);

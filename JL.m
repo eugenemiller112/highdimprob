@@ -11,7 +11,7 @@ function [Y,tcpu] = JL(X, k)
     end
     Y = zeros(k,n);
     %X = X';
-    start = cputime;
+    %start = cputime;
     for i = 1:n
         Y(:,i) = A*X(:,i);
     end
